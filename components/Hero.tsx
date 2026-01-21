@@ -1,74 +1,64 @@
-
 import React from 'react';
-import { ArrowRight, Zap } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-24 pb-12 overflow-hidden bg-white">
-      {/* Elementos Orgánicos Asimétricos */}
-      <div className="absolute -top-24 -right-24 w-[600px] h-[600px] bg-slate-50 rounded-full blur-3xl opacity-60 -z-10"></div>
-      <div className="absolute bottom-1/4 -left-12 w-64 h-64 bg-vibrant-red/5 rounded-full blur-2xl -z-10 animate-pulse"></div>
-      
-      <div className="container mx-auto px-6">
-        <div className="grid lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-7 animate-fade-in">
-            <header className="mb-8">
-              <div className="inline-flex items-center space-x-3 bg-rich-black text-white px-5 py-2 rounded-full mb-8 shadow-lg">
-                <span className="w-2 h-2 bg-vibrant-red rounded-full animate-ping"></span>
-                <span className="text-[10px] font-bold uppercase tracking-[0.2em]">Tu Consultor de Confianza</span>
-              </div>
-              
-              <h1 className="text-6xl md:text-8xl font-serif font-black leading-[0.95] mb-8 text-rich-black tracking-tighter">
-                Hacemos que tu <br />
-                <span className="text-vibrant-red italic">negocio escale</span> <br />
-                con IA y Web.
-              </h1>
-              
-              <p className="text-xl text-gray-500 leading-relaxed max-w-xl text-balance font-light">
-                No somos solo una agencia; somos el aliado estratégico que estabas esperando en <span className="text-rich-black font-semibold">Portuguesa</span>. Fusionamos tecnología de punta con una visión humana para transformar tu presencia digital.
-              </p>
-            </header>
-            
-            <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6">
-              <a 
-                href="#contacto" 
-                className="w-full sm:w-auto bg-vibrant-red text-white px-10 py-5 rounded-2xl font-bold flex items-center justify-center hover:bg-red-700 transition-all group shadow-2xl shadow-red-500/30 active:scale-95"
-              >
-                Inicia tu Transformación
-                <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
-              <a 
-                href="#proyectos" 
-                className="w-full sm:w-auto px-10 py-5 rounded-2xl font-bold flex items-center justify-center text-rich-black hover:bg-slate-50 transition-all border border-transparent hover:border-slate-200"
-              >
-                Ver Casos de Éxito
-              </a>
-            </div>
-            
-            <div className="mt-16 pt-8 border-t border-gray-100 flex flex-wrap gap-8 items-center text-gray-400">
-              <div className="flex items-center space-x-2">
-                <span className="text-rich-black font-bold text-2xl">50+</span>
-                <span className="text-[10px] uppercase font-bold tracking-widest leading-none">Marcas <br />Impulsadas</span>
-              </div>
-              <div className="h-8 w-px bg-gray-200 hidden sm:block"></div>
-              <p className="text-sm italic">"La misma tecnología de Qué Comer aplicada a tu negocio."</p>
-            </div>
-          </div>
+    <section className="relative pt-20 pb-0 overflow-hidden">
+      <div className="container mx-auto px-4">
+        <div className="bg-vibrant-red rounded-[2.5rem] md:rounded-[4rem] min-h-[85vh] relative overflow-hidden flex flex-col lg:flex-row items-center">
           
-          <div className="lg:col-span-5 relative hidden lg:block">
-            <div className="relative z-10 p-4 bg-white rounded-[2.5rem] shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] rotate-3 animate-float">
-              <img 
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=800&auto=format&fit=crop" 
-                alt="Agencia Digital Portuguesa" 
-                className="rounded-[2rem] grayscale hover:grayscale-0 transition-all duration-700"
-              />
-              <div className="absolute -bottom-8 -right-8 bg-rich-black p-8 rounded-3xl shadow-2xl text-white">
-                <Zap className="text-vibrant-red w-8 h-8 mb-2" />
-                <p className="text-xs uppercase font-bold tracking-tighter opacity-60">Resultados IA</p>
-                <p className="text-3xl font-serif font-bold">100% Real</p>
+          {/* Content */}
+          <div className="lg:w-1/2 p-8 md:p-20 z-10 text-white">
+            <h1 className="text-5xl md:text-8xl font-black leading-[0.9] tracking-tighter mb-8 animate-fade-in">
+              Hacemos Crecer <br />
+              <span className="opacity-90">Tu Propio</span> <br />
+              Negocio.
+            </h1>
+            
+            <button className="bg-rich-black text-white px-8 py-4 rounded-xl font-bold flex items-center group transition-all hover:scale-105 active:scale-95 mb-12">
+              EMPEZAR AHORA
+              <ArrowUpRight className="ml-2 w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            </button>
+            
+            <p className="text-white/80 max-w-sm text-sm md:text-base leading-relaxed font-light">
+              Presentamos una variedad de servicios y estrategias atractivas para asegurar el éxito rotundo de tu marca en Portuguesa.
+            </p>
+          </div>
+
+          {/* Image Area */}
+          <div className="lg:w-1/2 relative h-[400px] lg:h-full w-full flex items-end justify-center lg:justify-end">
+            <img 
+              src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=1000&auto=format&fit=crop" 
+              alt="Consultoría Digital" 
+              className="h-[110%] w-auto object-cover object-top z-10 lg:mr-10 drop-shadow-2xl"
+            />
+            
+            {/* Decorative circles from the style guide */}
+            <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+            
+            {/* Floating Badge */}
+            <div className="absolute bottom-20 left-10 lg:left-0 z-20 bg-white p-4 rounded-2xl shadow-2xl flex items-center space-x-3 animate-float hidden md:flex">
+              <div className="w-10 h-10 bg-vibrant-red rounded-full flex items-center justify-center">
+                <span className="text-white text-xs">💬</span>
+              </div>
+              <div>
+                <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Atención 24/7</p>
+                <p className="text-sm font-black text-rich-black tracking-tight">Chat con Expertos</p>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      
+      {/* Brands Strip */}
+      <div className="py-12 md:py-16 container mx-auto px-6 overflow-hidden">
+        <div className="flex flex-wrap justify-center md:justify-between items-center gap-8 opacity-40 grayscale hover:grayscale-0 transition-all">
+          <span className="text-2xl font-black italic">GLOBALCHART</span>
+          <span className="text-2xl font-black italic">EXDONE</span>
+          <span className="text-2xl font-black italic">TEAMTALK</span>
+          <span className="text-2xl font-black italic">SLABSPACE</span>
+          <span className="text-2xl font-black italic">FANCYWEAR</span>
+          <span className="text-2xl font-black italic">SELFAST</span>
         </div>
       </div>
     </section>
